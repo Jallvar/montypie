@@ -1,0 +1,40 @@
+{
+    "name": "montypie/dadata",
+    "description": "Dadata api",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "montypie",
+            "email": "montypie@webservise.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MontyPie\\DaData\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "../../guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "../../phpunit/phpunit": "^9.4.0",
+        "orchestra/testbench": "^6.2.0"
+    },
+    "prefer-stable": true,
+    "extra": {
+        "laravel":{
+            "providers": [
+                "MontyPie\\DaData\\DaDataServiceProvider"
+            ],
+            "aliases": {
+                "DaDataAddress": "MontyPie\\DaData\\Facades\\DaDataAddress",
+                "DaDataName": "MontyPie\\DaData\\Facades\\DaDataName",
+                "DaDataCompany": "MontyPie\\DaData\\Facades\\DaDataCompany",
+                "DaDataBank": "MontyPie\\DaData\\Facades\\DaDataBank",
+                "DaDataPassport": "MontyPie\\DaData\\Facades\\DaDataPassport"
+            }
+        }
+    }
+}
